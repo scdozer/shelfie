@@ -1,0 +1,29 @@
+.home-header{
+  background-color: #ab2a19;
+  color: #fff;
+  padding: 20px;
+}
+.home-nav{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+}
+.logo{width: 50px;}
+.home-header h1{ margin-left: 10px}
+
+
+.home-shelf{
+  background-color: #d34735;
+  width: 60%;
+  margin: 15px auto;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 30px;
+}
+.home-shelf a {
+  text-decoration: none;
+}
