@@ -8,33 +8,37 @@ export default class Home extends Component {
   constructor(props){
     super(props);
     this.state={
-
       shelfId:"",
       shelfNm:"",
       bins:[
         {
+          shelfid : this.props.match.params.id,
           binnm: "+ Add inventory to bin",
-          positionNBR: 1,
+          positionnbr: 1,
           active: false
         },
         {
+          shelfid : this.props.match.params.id,
           binnm: "+ Add inventory to bin",
-          positionNBR: 2,
+          positionnbr: 2,
           active: false
         },
         {
+          shelfid : this.props.match.params.id,
           binnm: "+ Add inventory to bin",
-          positionNBR: 3,
+          positionnbr: 3,
           active: false
         },
         {
+          shelfid : this.props.match.params.id,
           binnm: "+ Add inventory to bin",
-          positionNBR: 4,
+          positionnbr: 4,
           active: false
         },
         {
+          shelfid : this.props.match.params.id,
           binnm: "+ Add inventory to bin",
-          positionNBR: 5,
+          positionnbr: 5,
           active: false
         }
       ]
@@ -57,8 +61,7 @@ export default class Home extends Component {
     .then(response => {
       const data = response.data;
       const binsCopy = Object.assign([], this.state.bins)
-      console.log('binsCopy', binsCopy);
-      data.forEach( (bin)=> {
+      data.forEach( bin => {
         binsCopy.splice(bin.positionnbr-1, 1, bin);
       })
       this.setState({
@@ -74,19 +77,20 @@ export default class Home extends Component {
   return(
     <div className="Shelf">
       <header className="shelf-header">
-        <div className="shelf-nav">
-          <img src={logo} className="logo" alt="Shelfie"/> <h1 className="title">SHELFIE</h1>
-        </div>
+          <div className="shelf-nav">
+              <Link to={'/'} className="no-decoration">
+                <img src={logo} className="logo" alt="Shelfie"/>
+              </Link>
+          </div>
       </header>
 
       {this.state.bins.map((bins =>{
           return (
-            // <Link to={`/shelf/${bins.shelfid}`} className="no-decoration">
-              <div className="shelf-bin">{bins.binnm}</div>
-            // </Link>
+            <Link to={`/shelf/${bins.shelfid}/${bins.binid ? bins.binid : 'create'}`} className="no-decoration" key={bins.positionnbr}>
+              <div className={bins.binid ? 'shelf-bin shelf-active': 'shelf-bin'}>{bins.binnm}</div>
+            </Link>
           )
         }))}
-
     </div>
   )
 }

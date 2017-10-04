@@ -14,7 +14,7 @@
 .shelf-header h1{ margin-left: 10px}
 
 .shelf-bin{
-  background-color: #d34735;
+  background-color: #ffb8af;
   width: 60%;
   margin: 15px auto;
   border-radius: 5px;
@@ -22,4 +22,8 @@
   color: #fff;
   font-weight: 700;
   font-size: 30px;
+}
+
+.shelf-active{
+  background-color: #ed6b5a;
 }

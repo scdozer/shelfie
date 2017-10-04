@@ -1,1 +1,1 @@
-SELECT * FROM Shelfie_Bin WHERE shelfid = shelfid;
+SELECT * FROM Shelfie_Bin WHERE shelfid = ${shelfid};

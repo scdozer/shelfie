@@ -33,7 +33,7 @@ export default class Home extends Component {
           return (
             <Link to={`/shelf/${shelfie.shelfid}`}
             className="no-decoration">
-              <div className="home-shelf">{shelfie.shelfnm}</div>
+              <div key={shelfie.shelfnm} className="home-shelf">{shelfie.shelfnm}</div>
             </Link>
           )
         }))}
