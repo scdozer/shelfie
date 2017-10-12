@@ -16,5 +16,8 @@ app.get('/api/shelfie', controller.getShelfie);
 app.get('/api/shelf/:shelfid', controller.getShelf);
 app.get('/api/bins/:shelfid', controller.getBins);
 
+app.post('/api/bins/', controller.createBins);
+app.get('/api/bins/delete/:positionnbr', controller.getBins);
+
 const port= process.env.PORT || 3001
 app.listen( port, () => { console.log(`Listening on port ${port}`); } );

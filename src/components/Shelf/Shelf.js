@@ -86,7 +86,7 @@ export default class Home extends Component {
 
       {this.state.bins.map((bins =>{
           return (
-            <Link to={`/shelf/${bins.shelfid}/${bins.binid ? bins.binid : 'create'}`} className="no-decoration" key={bins.positionnbr}>
+            <Link to={`/shelf/${bins.shelfid}/${bins.binid ? bins.binid : `create/${bins.positionnbr}`}`} className="no-decoration" key={bins.positionnbr}>
               <div className={bins.binid ? 'shelf-bin shelf-active': 'shelf-bin'}>{bins.binnm}</div>
             </Link>
           )
