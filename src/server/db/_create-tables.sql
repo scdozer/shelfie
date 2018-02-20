@@ -12,7 +12,7 @@ CREATE TABLE Shelfie_bin (
 );
 
 INSERT INTO Shelfie_bin
-(BinNM, PoristionNBM, PriceAMT, ShelfID)
+(BinNM, PositionNBR, PriceAMT, ShelfID)
 VALUES ('Bin 2', 2, 10, 'A')
 
 INSERT INTO Shelfie_bin
